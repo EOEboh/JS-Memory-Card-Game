@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://use.fontawesome.com/45e01bcc2b.js"></script>
+    <title>Memory Card Game</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Memory Card Game</h1>
+    
+ <section class="score-board">
+     <ul class="stars">
+         <li><i class="fa fa-star" aria-hidden="true"></i></li>
+         <li><i class="fa fa-star" aria-hidden="true"></i></li>
+         <li><i class="fa fa-star" aria-hidden="true"></i></li>
+     </ul>
+
+<span id="moves">0</span>
+
+<div class="timer"><!-- contains the timer--></div>
+<div class="reset" onclick="startGame()">
+    <i class="fa fa-repeat" aria-hidden="true"></i>
+</div>
+</section>
+<!-- Main card deck -->
+<section>
+    <ul class="deck" id="cards-deck">
+        
+      <li class="card match" type="compass"><i class="fa fa-compass" aria-hidden="true"></i></li>
+      <li class="card" type="diamond"><i class="fa fa-diamond" aria-hidden="true"></i></li>
+      <li class="card" type="paper"><i class="fa fa-paper-plane" aria-hidden="true"></i></li>
+      <li class="card" type="paw"><i class="fa fa-paw" aria-hidden="true"></i></li>
+      <li class="card" type="plane"><i class="fa fa-plane" aria-hidden="true"></i></li>
+      <li class="card" type="ship"><i class="fa fa-ship" aria-hidden="true"></i></li>
+      <li class="card" type="cloud"><i class="fa fa-cloud-download" aria-hidden="true"></i></li>
+      <li class="card" type="camera"><i class="fa fa-camera" aria-hidden="true"></i></li>
+      <li class="card" type="bug"><i class="fa fa-bug" aria-hidden="true"></i></li>
+      <li class="card" type="bomb"><i class="fa fa-bomb" aria-hidden="true"></i></li>
+      <!--  -->
+      <li class="card" type="ship"><i class="fa fa-ship" aria-hidden="true"></i></li>
+      <li class="card" type="camera"><i class="fa fa-camera" aria-hidden="true"></i></li>
+      <li class="card" type="paper"><i class="fa fa-paper-plane" aria-hidden="true"></i></li>
+      <li class="card match" type="compass"><i class="fa fa-compass" aria-hidden="true"></i></li>
+      <li class="card" type="bug"><i class="fa fa-bug" aria-hidden="true"></i></li>  
+      <li class="card" type="diamond open show"><i class="fa fa-diamond" aria-hidden="true"></i></li>
+      <li class="card" type="paw"><i class="fa fa-paw" aria-hidden="true"></i></li>
+      <li class="card" type="cloud"><i class="fa fa-cloud-download" aria-hidden="true"></i></li><li class="card" type="bomb"><i class="fa fa-bomb" aria-hidden="true"></i></li>
+      <li class="card" type="plane"><i class="fa fa-plane" aria-hidden="true"></i></li>
+    </ul>
+</section>
+
+<!-- Congrats popup section -->
+<div id="popUp" class="congrats">
+    <div class="content-1">
+        <h2>Congratulations</h2>
+    
+    <a class="closeBtn" href="#">x</a>
+    <div class="content-2">
+        Congratulations you're a winner
+    </div>
+<div class="content-3">
+    <p>You made <span id="finalMoves"></span>moves</p>
+    <p>in <span id="timeSpent"></span></p>
+    <p>Rating: <span id="starRating"></span></p>
+</div>
+<button id="play-again" onclick="playAgain()">Play Again</button>
+
+
+</div>
+</div>
+</div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
