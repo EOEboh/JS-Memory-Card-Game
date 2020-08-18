@@ -11,7 +11,7 @@ const deck = document.getElementById('cards-deck');
 let moves = 0;
 
 // counting the moves 
-let counter = document.querySelector('.moves');
+let counter = document.getElementById('.moves');
 
 // variables for the star icons
 const stars = document.querySelectorAll('.fa-star');
@@ -67,7 +67,7 @@ function startGame(){
     minute = 0;
     hour = 0;
 let timer = document.querySelector('.timer');
-timer.innerHTML = "0 mins 0 secs";
+timer.innerHTML = ` ${minute} mins ${second} secs `;
 clearInterval(interval);
 }
 
@@ -83,15 +83,17 @@ var displayCard = function(){
 function cardOpen(){
     openedCards.push(this);
     var len = openedCards.length;
-    if( len == 2){
+    if( len == 1){
         moveCounter();
+    }
+        
         // conditions if their types match call matched() or else call unmatched()
         if(openedCards[0].type === openedCards[1].type){
             matched();
         } else{
             unmatched();
         }
-    }
+    
 };
 
 // now defining our matched(), unmatched(), disable() functions
@@ -169,7 +171,7 @@ var timer = document.querySelector('.timer');
 var interval;
 function startTimer(){
     interval = setInterval(() => {
-        timer.innerHTML = `${minute} mins ${second} secs`;
+        timer.innerHTML = ` ${minute} mins ${second} secs `
         second++;
         if(second == 60){
             minute++;

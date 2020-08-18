@@ -24,27 +24,33 @@ body{
 	justify-content: space-around;
 	align-items: center;
 	width: 80%;
-	background: deepskyblue;
+	background: #716f71;
 	padding: 1rem;
-	margin: 0 0 2rem;
+	margin: auto;
+	box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+	
 }
 .deck .card{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 2rem;
-	width: 2em;
-	margin-top: 0.3rem;
+	height: 4rem;
+	width: 4rem;
+	margin: 0.3rem 0.3rem;
 	margin-bottom: 0.3rem;
+	font-size: 0;
 	background: #141214;
-	color: firebrick;
+	color: #ecd6ad;
 	cursor: pointer;
+	box-shadow: 5px 2px 20px 0 rgb(20, 20, 20);
+	border-radius: 8px;
+	
 }
 
 .deck .card.open {
 	transform: rotateY(0);
 	background: #02b3e4;
-	animation-name: flipInY;
+	animation-name: flip;
 	-webkit-backface-visibility: visible !important;
 	backface-visibility: visible !important;
 	animation-duration: .75s;
@@ -56,7 +62,7 @@ body{
 
 .deck .card.match {
 	cursor: default;
-	background: #E5F720;
+	background: rgb(11, 182, 11);
 	font-size: 33px;
 	animation-name: rubberBand;
 	-webkit-backface-visibility: visible !important;
@@ -69,12 +75,12 @@ body{
 	-webkit-backface-visibility: visible !important;
 	backface-visibility: visible !important;
 	animation-duration: .75s;
-	background: #e2043b;
+	background: #ce1e1e;
 }
 
 .deck .card.disabled {
 	pointer-events: none;
-	opacity: 0.9;
+	opacity: 1;
 }
 /* score-board */
 .score-board {
@@ -191,7 +197,7 @@ body{
 }
 
 /* animations */
-@keyframes flipInY {
+@keyframes flip {
 	from {
 		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
 		animation-timing-function: ease-in;
