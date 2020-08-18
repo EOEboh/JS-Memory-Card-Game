@@ -11,7 +11,7 @@ const deck = document.getElementById('cards-deck');
 let moves = 0;
 
 // counting the moves 
-let counter = document.getElementById('.moves');
+let counter = document.getElementById('moves');
 
 // variables for the star icons
 const stars = document.querySelectorAll('.fa-star');
@@ -141,7 +141,8 @@ function enable(){
 
 // count the player's moves
 function moveCounter(){
-    moves++;
+    
+    moves += 1;
     counter.innerHTML = moves;
 
     // start timer on first click
@@ -172,13 +173,13 @@ var interval;
 function startTimer(){
     interval = setInterval(() => {
         timer.innerHTML = ` ${minute} mins ${second} secs `
-        second++;
+        second += 1;
         if(second == 60){
-            minute++;
+            minute += 1;
             second = 0;
         }
         if( minute == 60){
-            hour++;
+            hour += 1;
             minute = 0;
         }
     }, 1000);

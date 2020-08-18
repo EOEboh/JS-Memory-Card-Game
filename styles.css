@@ -17,6 +17,7 @@ body{
 	align-items: center;
 	flex-direction: column;
 }
+h1,h2{ font-family: cursive;}
 /* main deck of cards */
 .deck{
 	display: flex;
@@ -24,7 +25,7 @@ body{
 	justify-content: space-around;
 	align-items: center;
 	width: 80%;
-	background: #716f71;
+	background: #5b5b8d;
 	padding: 1rem;
 	margin: auto;
 	box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
@@ -39,10 +40,10 @@ body{
 	margin: 0.3rem 0.3rem;
 	margin-bottom: 0.3rem;
 	font-size: 0;
-	background: #141214;
+	background: rgb(39, 39, 39);
 	color: #ecd6ad;
 	cursor: pointer;
-	box-shadow: 5px 2px 20px 0 rgb(20, 20, 20);
+	box-shadow: 5px 2px 20px 0;
 	border-radius: 8px;
 	
 }
