@@ -53,7 +53,7 @@ h1,h2{ font-family: cursive;}
 .deck .card.open {
 	transform: rotateY(0);
 	background: #02b3e4;
-	animation-name: flip;
+	animation-name: flipOpen;
 	-webkit-backface-visibility: visible !important;
 	backface-visibility: visible !important;
 	animation-duration: .75s;
@@ -65,16 +65,16 @@ h1,h2{ font-family: cursive;}
 
 .deck .card.match {
 	cursor: default;
-	background: rgb(11, 182, 11);
+	background: #0bb60b;
 	font-size: 33px;
-	animation-name: rubberBand;
+	animation-name: matchAnime;
 	-webkit-backface-visibility: visible !important;
 	backface-visibility: visible !important;
-	animation-duration: .75s;
+	animation-duration: 0.75s;
 }
 
 .deck .card.unmatched {
-	animation-name: pulse;
+	animation-name: unmatchAnime;
 	-webkit-backface-visibility: visible !important;
 	backface-visibility: visible !important;
 	animation-duration: .75s;
@@ -200,7 +200,7 @@ h1,h2{ font-family: cursive;}
 }
 
 /* animations */
-@keyframes flip {
+@keyframes flipOpen {
 	from {
 		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
 		animation-timing-function: ease-in;
@@ -226,7 +226,7 @@ h1,h2{ font-family: cursive;}
 	}
 }
 
-@keyframes rubberBand {
+@keyframes matchAnime {
 	from {
 		transform: scale3d(1, 1, 1);
 	}
@@ -256,7 +256,7 @@ h1,h2{ font-family: cursive;}
 	}
 }
 
-@keyframes pulse {
+@keyframes unmatchAnime {
 	from {
 		transform: scale3d(1, 1, 1);
 	}

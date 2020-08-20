@@ -66,8 +66,10 @@ function startGame(){
     second = 0;
     minute = 0;
     hour = 0;
+    moves = 0;
 let timer = document.querySelector('.timer');
-timer.innerHTML = ` ${minute} mins ${second} secs `;
+timer.innerHTML = `0 mins 0 secs `;
+counter.innerHTML = `0`
 clearInterval(interval);
 }
 
@@ -152,6 +154,7 @@ function moveCounter(){
         hour = 0;
         startTimer();
     }
+
     // setting the rates based on moves
     if(moves > 10 && moves < 14 ){
         for(i =0; i < 3; i++){
@@ -160,7 +163,6 @@ function moveCounter(){
             }
         }
     }
-
 }
 
 // game timing 
